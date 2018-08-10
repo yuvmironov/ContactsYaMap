@@ -1,0 +1,245 @@
+{
+  "Москва": {
+    "ООО Армед": [
+      {
+        "targetYa": "armed",
+        "name": "Армед Фирменный интернет магазин",
+        "logo": "https://www.armed.ru/wp-content/themes/armed/inc/pages/promo/koncentrator/images/IndexLogo.png",
+        "address": "МО, г. Балашиха, Западная коммунальная зона, Шоссе Энтузиастов, владение 11А, строение 3Б",
+        "link": "https://www.armed.ru/product-category/medicinskoe-oborudovanie-i-soputstvuyushhie-tovary/kislorodnoe-oborudovanie-i-soputstvuyushhie-tovary/",
+        "coordinates": [55.785582233550514, 37.86439927777097],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [35, 35],
+        "iconImageOffset": [-17, -17]
+      }
+    ],
+    "Экомедика": [
+      {
+        "targetYa": "armed",
+        "name": "Экомедика",
+        "logo": "https://www.ecomedika.ru/assets/logo.png",
+        "address": "ул.Ярцевская д. 32",
+        "link": "https://www.ecomedika.ru/index.php?route=product/product&product_id=704&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [55.7392646, 37.4135197],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      },
+      {
+        "targetYa": "ekomed",
+        "name": "Экомедика",
+        "logo": "https://www.ecomedika.ru/assets/logo.png",
+        "address": "ул.Широкая. д.10 к.2",
+        "link": "https://www.ecomedika.ru/index.php?route=product/product&product_id=704&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [55.88673056886598, 37.65308249999999],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      },
+      {
+        "targetYa": "ekomed",
+        "name": "Экомедика",
+        "logo": "https://www.ecomedika.ru/assets/logo.png",
+        "address": "ул. Большие Каменщики д.6 стр.1",
+        "link": "https://www.ecomedika.ru/index.php?route=product/product&product_id=704&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [55.73609256901557, 37.65503200000003],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      }
+    ],
+    "Доброта": [
+      {
+        "targetYa": "dobrota",
+        "name": "ДОБРОТА.РУ",
+        "logo": "https://www.dobrota.ru/phpshop/templates/dobrota/images/dobrota.gif",
+        "address": "Москва. ул. Угличская, д. 16",
+        "link": "https://www.dobrota.ru/shop/CID_291_1_kislorodnye_koncentratory.html?v[54]=150&v[44]=&priceOT=0&priceDO=0&priceSearch=%20&s=1&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [55.905126,
+        37.568384],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      },
+      {
+        "targetYa": "dobrota",
+        "name": "ДОБРОТА.РУ",
+        "logo": "https://www.dobrota.ru/phpshop/templates/dobrota/images/dobrota.gif",
+        "address": "Ул. Вешняковская, 22А",
+        "link": "https://www.dobrota.ru/shop/CID_291_1_kislorodnye_koncentratory.html?v[54]=150&v[44]=&priceOT=0&priceDO=0&priceSearch=%20&s=1&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [55.720428,
+        37.82218],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      },
+      {
+        "targetYa": "dobrota",
+        "name": "ДОБРОТА.РУ",
+        "logo": "https://www.dobrota.ru/phpshop/templates/dobrota/images/dobrota.gif",
+        "address": "Пролетарский проспект д. 20, к 1",
+        "link": "https://www.dobrota.ru/shop/CID_291_1_kislorodnye_koncentratory.html?v[54]=150&v[44]=&priceOT=0&priceDO=0&priceSearch=%20&s=1&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [55.633734,
+        37.6572429],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      }
+    ],
+    "Центр Кислород": [
+      {
+        "targetYa": "centrkis",
+        "name": "Специализированный Центр Кислород",
+        "logo": "https://o2-spb.ru/upload/aspro.mshop/6fd/logo_old.png",
+        "address": "Москва, ул. Брянская, 32 стр.6",
+        "link": "https://o2-spb.ru/catalog/domashnie-kislorodnye-kontsentratory/kisloroda-1-2-3l/filter/brand-is-armed/apply/?utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+        "coordinates": [ 55.745408,
+        37.559282],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [20, 20],
+        "iconImageOffset": [-10, -10]
+      }
+    ]
+  },
+  "Санкт-Петербург": {
+    "ООО Армед": [
+      {
+        "targetYa": "armed",
+        "name": "Армед Фирменный интернет магазин",
+        "logo": "https://www.armed.ru/wp-content/themes/armed/inc/pages/promo/koncentrator/images/IndexLogo.png",
+        "address": "МО, г. Балашиха, Западная коммунальная зона, Шоссе Энтузиастов, владение 11А, строение 3Б",
+        "link": "https://www.armed.ru/product-category/medicinskoe-oborudovanie-i-soputstvuyushhie-tovary/kislorodnoe-oborudovanie-i-soputstvuyushhie-tovary/",
+        "coordinates": [],
+        "iconImageHref": "Item.svg",
+        "iconImageSize": [35, 35],
+        "iconImageOffset": [-17, -17]
+      }
+    ],
+    "Экомедика": [
+      {
+      "name": "Экомедика ",
+      "targetYa": "ekomed",
+      "logo": "https://www.ecomedika.ru/assets/logo.png",
+      "address": "Коломяжский пр-т д.20",
+      "link": "https://www.ecomedika.ru/index.php?route=product/product&product_id=704&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+      "coordinates": [
+        59.9983442,
+        30.2982644
+      ],
+      "iconImageHref": "Item.svg",
+      "iconImageSize": [
+        20,
+        20
+      ],
+      "iconImageOffset": [
+        -10,
+        -10
+      ]
+    },
+      {
+        "name": "Экомедика ",
+      "targetYa": "ekomed",
+      "logo": "https://www.ecomedika.ru/assets/logo.png",
+      "address": "Звездная д.9 к.1",
+      "link": "https://www.ecomedika.ru/index.php?route=product/product&product_id=704&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+      "coordinates": [
+        59.834174,
+        30.358404
+      ],
+      "iconImageHref": "Item.svg",
+      "iconImageSize": [
+        20,
+        20
+      ],
+      "iconImageOffset": [
+        -10,
+        -10
+      ]
+      }
+    ],
+    "Доброта": [
+      {
+        "name": " «ДОБРОТА.РУ»",
+      "targetYa": "dobrota",
+      "logo": "https://www.dobrota.ru/phpshop/templates/dobrota/images/dobrota.gif",
+      "address": "Василеостровский р-н, 5-я линия, д. 46",
+      "link": "https://www.dobrota.ru/shop/CID_291_1_kislorodnye_koncentratory.html?v[54]=150&v[44]=&priceOT=0&priceDO=0&priceSearch=%20&s=1&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+      "coordinates": [
+        59.9448217,
+        30.2796241
+      ],
+      "iconImageHref": "Item.svg",
+      "iconImageSize": [
+        20,
+        20
+      ],
+      "iconImageOffset": [
+        -10,
+        -10
+      ]
+      },
+      {
+        "name": " «ДОБРОТА.РУ»",
+      "targetYa": "dobrota",
+      "logo": "https://www.dobrota.ru/phpshop/templates/dobrota/images/dobrota.gif",
+      "address": "ул. Олеко Дундича, д. 34, корп. 1",
+      "link": "https://www.dobrota.ru/shop/CID_291_1_kislorodnye_koncentratory.html?v[54]=150&v[44]=&priceOT=0&priceDO=0&priceSearch=%20&s=1&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+      "coordinates": [
+        59.827499,
+        30.399018
+      ],
+      "iconImageHref": "Item.svg",
+      "iconImageSize": [
+        20,
+        20
+      ],
+      "iconImageOffset": [
+        -10,
+        -10
+      ]
+      },
+      {
+        "name": " «ДОБРОТА.РУ»",
+      "targetYa": "dobrota",
+      "logo": "https://www.dobrota.ru/phpshop/templates/dobrota/images/dobrota.gif",
+      "address": "Богатырский пр-т, д. 4",
+      "link": "https://www.dobrota.ru/shop/CID_291_1_kislorodnye_koncentratory.html?v[54]=150&v[44]=&priceOT=0&priceDO=0&priceSearch=%20&s=1&utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+      "coordinates": [
+        59.999378,
+        30.29128
+      ],
+      "iconImageHref": "Item.svg",
+      "iconImageSize": [
+        20,
+        20
+      ],
+      "iconImageOffset": [
+        -10,
+        -10
+      ]
+      }
+    ],
+    "Центр Кислород": [
+      {
+        "name": "Специализированный Центр Кислород",
+      "targetYa": "centrkis",
+      "logo": "https://o2-spb.ru/upload/aspro.mshop/6fd/logo_old.png",
+      "address": "Санкт-Петербург, ул. Ефимова, 4А, оф.419 ",
+      "link": "https://o2-spb.ru/catalog/domashnie-kislorodnye-kontsentratory/kisloroda-1-2-3l/filter/brand-is-armed/apply/?utm_source=promo_armed_2018&utm_medium=promo&utm_campaign=kislorod_koncentratory",
+      "coordinates": [
+        59.92517,
+        30.322439
+      ],
+      "iconImageHref": "Item.svg",
+      "iconImageSize": [
+        20,
+        20
+      ],
+      "iconImageOffset": [
+        -10,
+        -10
+      ]
+      }
+    ]
+  }
+}
