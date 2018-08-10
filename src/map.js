@@ -57,17 +57,31 @@ function createLink(className, hrefLink, inner) {
 	return link;
 }
 
+/**
+ * Функция для построения информации по одному адресу
+ * @param data - данные по одному адресу
+ * @param collection - коллекция Yandex карт для добовления меток
+ * @param storeContainer - контейнер для добовления адреса
+ */
 function createStoreInfo(data, collection, storeContainer) {
+	//Блок для одного адреса
 	const infoStore = createElementSingleClass('div', 'Brand-Inner');
+	//Название магазина
 	const name = createElementSingleClass('p', 'Brand-Name', data.name);
+	//Адрес магазина
 	const address = createElementSingleClass('p', 'Brand-Address', data.address);
+	//Линк на интрнет магазин
 	const link = createLink('Brand-LinkRedirection', data.link, 'Перейти в магазин');
+	//Собираем все в кучу
 	infoStore.appendChild(name);
 	infoStore.appendChild(address);
 	infoStore.appendChild(link);
+	//Добавляем в блок для магазина
 	storeContainer.appendChild(infoStore);
-
+	
+	//Если координаты пусты, то метку на карту не ставим (актуально для адресов АРМЕД в городах кроме москвы)
 	if (data.coordinates.length !== 0) {
+		//Создаем метку
 		let placeMark = new ymaps.Placemark(
 			data.coordinates, {
 				hintContent: data.name,
@@ -81,7 +95,9 @@ function createStoreInfo(data, collection, storeContainer) {
 				iconImageOffset: data.iconImageOffset,
 				hideIconOnBalloonOpen: false
 			});
+		//Добавляем метку в коллекцию
 		collection.add(placeMark);
+		//Обработчик открытия балуна по наведению на адрес (можно повестиь данный обработчик на любой элемент из текущей функции)
 		address.addEventListener('mouseenter', function () {
 			placeMark.balloon.open();
 		});
@@ -91,36 +107,48 @@ function createStoreInfo(data, collection, storeContainer) {
 	}
 }
 
-function createBrandInfo(data, collection, storeElement, city) {
+/**
+ * Функция создания информации по одному бренду
+ * @param data - данные по бренду
+ * @param collection - коллекция для добавления меток (проброс в следующую функцию)
+ * @param storeElement - блок для добавления информации по бренду
+ */
+function createBrandInfo(data, collection, storeElement) {
+	//Создаем блок для одного магазина
 	const oneStoreInfo = createElementSingleClass('div', 'Accord-Content');
 	oneStoreInfo.classList.add('Brand-Content');
 	for (let i = 0; i < data.length; i++) {
+		//Добавляем магазины
 		createStoreInfo(data[i], collection, oneStoreInfo);
 	}
+	//Добавляем информацию для бренда
 	storeElement.appendChild(oneStoreInfo);
 }
 
+/**
+ * Функция для создания информации по одному городу
+ * @param data - данные для работы
+ * @param elementCity - блок для вставки информации
+ * @param collection - коллекция для меток (проброс в следующую функцию)
+ */
 function createCityInfo(data, elementCity, collection) {
 	//контейнер для одного города
 	const oneCity = createElementSingleClass('div', 'Accord-Content');
-	oneCity.classList.add('City-Content')
+	oneCity.classList.add('City-Content');
 	//контейнер для аккордиона с брендами
 	const oneStore = createElementSingleClass('div', 'Accord');
-	oneStore.classList.add('Brand')
+	oneStore.classList.add('Brand');
+	//Создаем информацию по брендам в городе
 	for (let brand in data) {
-		//console.log(brand);
-		//console.log(data[brand][0].logo);
 		const oneStoreElement = createElementSingleClass('div', 'Accord-Element');
-		oneStoreElement.classList.add('Brand-Element')
-		const onaeStoreLink = createLink('Accord-Link', '#', brand);
-		onaeStoreLink.classList.add('Brand-Link')
-
+		oneStoreElement.classList.add('Brand-Element');
+		const oneStoreLink = createLink('Accord-Link', '#', brand);
+		oneStoreLink.classList.add('Brand-Link');
 		const brandLogo = createElementSingleClass('img', 'Brand-Logo');
 		brandLogo.src = data[brand][0].logo;
 		brandLogo.alt = brand;
-		onaeStoreLink.appendChild(brandLogo);
-
-		oneStoreElement.appendChild(onaeStoreLink);
+		oneStoreLink.appendChild(brandLogo);
+		oneStoreElement.appendChild(oneStoreLink);
 		createBrandInfo(data[brand], collection, oneStoreElement);
 		oneStore.appendChild(oneStoreElement);
 	}
@@ -128,40 +156,39 @@ function createCityInfo(data, elementCity, collection) {
 	oneCity.appendChild(oneStore);
 	oneStore.MFSAccordeon({
 		autoClose: true
-	})
+	});
 	elementCity.appendChild(oneCity);
 
 }
 
+/**
+ * Функция для создания города
+ * @param city - название города
+ * @param data - данные для обработки
+ * @param map - ссылка на карту, для добвления коллекции с метками
+ * @param citiesList - блок для вставки созданной информации
+ */
 function createCitiesList(city, data, map, citiesList) {
 	//Создаем коллекцию для одного города
 	let oneCityCollection = new ymaps.GeoObjectCollection(null, {});
 	//Создаем блок для одного города, для создания аккордиона
 	const accordElement = createElementSingleClass('div', 'Accord-Element');
-	accordElement.classList.add('City-Element')
+	accordElement.classList.add('City-Element');
 	//Название города
 	const accordLink = createLink('Accord-Link', '#', city);
-	accordLink.classList.add('City-Link')
+	accordLink.classList.add('City-Link');
 	//Добавляем в блок название города
 	accordElement.appendChild(accordLink);
-
 	createCityInfo(data, accordElement, oneCityCollection);
-
-
 	//Добавляем в глобальный блок - елемень с инфой по городу
 	citiesList.appendChild(accordElement);
+	//Добавляем обработчик клика по названию города (при активном городе показываем коллекцию меток, при не активном убираем все коллекции с карты)
 	accordLink.addEventListener('click', function () {
 		if (!this.classList.contains('Accord-Link_Active')) {
 			map.geoObjects.removeAll();
 			map.geoObjects.add(oneCityCollection);
-			//if (data.items.length === 1) {
-			//	map.setBounds(map.geoObjects.getBounds());
-			//	map.setZoom(14);
-			//} else {
 			map.setBounds(map.geoObjects.getBounds());
 			map.setZoom(map.getZoom() - 1);
-			//}
-
 		} else {
 			map.geoObjects.removeAll();
 		}
@@ -178,7 +205,7 @@ function createCitiesList(city, data, map, citiesList) {
 function createMap() {
 	//Получение данных для обработки
 	$.getJSON('MapSource.json', (dataMap) => {
-		//Обращаемся к яндексу для получения координат центра города в котором показываем информацию
+		//Инициализируем карту с координатами в центре москвы
 		let myMap = new ymaps.Map(
 			'Map', {
 				center: [55.7491, 37.6210],
