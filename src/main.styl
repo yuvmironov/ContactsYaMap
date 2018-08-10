@@ -23,9 +23,34 @@
 .City
 	&-Link
 		display: flex;
-		padding: 10px 25px;
+		padding: 29px 47px;
 		transition 0.4s
 		position relative
+		font-family: Rubik;
+		line-height: 26px;
+		font-size: 18px;
+		color: #4F4F4F;
+		&:after
+			content ''
+			display block
+			width 18px
+			height 2px
+			top: calc(50% - 1px);
+			left: 19px;
+			background red
+			position absolute
+		&:before
+			content ''
+			display block
+			width 2px
+			height 18px
+			top: calc(50% - 9px);
+			left: 27px;
+			background red
+			position absolute
+		&:hover
+			background-color #f2f2f2
+			transition 0.4s
 	
 .Brand
 	&-Link 
@@ -33,30 +58,76 @@
 		flex-direction: row-reverse;
 		justify-content: flex-end;
 		align-items: center;
-		padding 10px
+		padding 19px 19px
+		font-family: Rubik;
+		line-height: 26px;
+		font-size: 18px;
+		color: #4F4F4F;
+		position: relative
+		//border-top: 1px solid #f2f2f2;
+		&:after
+			content ''
+			position: absolute
+			display block
+			width 12px
+			height: 3px
+			background-color: #A9A9A9
+			transform rotate(45deg);
+			right: 86px
+		&:before
+			content ''
+			position: absolute
+			display block
+			width 12px
+			height: 3px
+			background-color: #A9A9A9
+			transform rotate(-45deg);
+			right: 78px
+
 	&-Logo 
-		width: 140px;
-		margin-right: 15px;
-	&-Element
+		width: 195px;
+		margin-right: 53px;
+	/*&-Element
 		&:nth-child(odd)
-			background-color #f2f2f2
+			background-color #F1F1F4
+		&:nth-child(even)
+			background-color: #fff*/
 			
 	&-Inner
-		padding 10px
-		&:nth-child(odd) 
-			background: #e0e0e0
+		padding: 15px 144px;
+		/*&:nth-child(odd)
+			background: #F1F1F4
+		&:nth-child(even)
+			background-color: #fff*/
 	&-Name
 		font-family: Roboto;
 		font-weight: 500;
 		font-size: 18px;
 		color: #d64b4b;
-		cursor: pointer;
 		margin-bottom: 5px;
 	&-Address
 		font-family: Roboto;
 		font-size: 14px;
 		color: #4f4f4f;
 		margin-bottom: 5px;
+	&-Metro
+		font-family: Rubik;
+		line-height: 20px;
+		font-size: 14px;
+		color: #4F4F4F;
+		padding-left: 25px
+		position relative
+		&:before
+			content: '';
+			display: block;
+			width: 19px;
+			height: 13px;
+			background-image: url(Moscow_Metro.svg);
+			background-size: cover;
+			position: absolute;
+			left: 0;
+			top: 1px;
+			background-repeat: no-repeat
 	&-LinkRedirection
 		font-family: Roboto;
 		font-size: 14px;

@@ -70,11 +70,14 @@ function createStoreInfo(data, collection, storeContainer) {
 	const name = createElementSingleClass('p', 'Brand-Name', data.name);
 	//Адрес магазина
 	const address = createElementSingleClass('p', 'Brand-Address', data.address);
+	//Метро
+	const metro = createElementSingleClass('p', 'Brand-Metro', data.metro);
 	//Линк на интрнет магазин
 	const link = createLink('Brand-LinkRedirection', data.link, 'Перейти в магазин');
 	//Собираем все в кучу
 	infoStore.appendChild(name);
 	infoStore.appendChild(address);
+	infoStore.appendChild(metro);
 	infoStore.appendChild(link);
 	//Добавляем в блок для магазина
 	storeContainer.appendChild(infoStore);
@@ -98,10 +101,10 @@ function createStoreInfo(data, collection, storeContainer) {
 		//Добавляем метку в коллекцию
 		collection.add(placeMark);
 		//Обработчик открытия балуна по наведению на адрес (можно повестиь данный обработчик на любой элемент из текущей функции)
-		address.addEventListener('mouseenter', function () {
+		infoStore.addEventListener('mouseenter', function () {
 			placeMark.balloon.open();
 		});
-		address.addEventListener('mouseleave', function () {
+		infoStore.addEventListener('mouseleave', function () {
 			placeMark.balloon.close();
 		});
 	}
